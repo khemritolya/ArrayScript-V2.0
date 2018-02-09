@@ -46,7 +46,8 @@ public class UI extends JFrame {
         open.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 JFileChooser fileChooser = new JFileChooser();
-                fileChooser.setCurrentDirectory(new File("C:\\"));
+                fileChooser.setCurrentDirectory(new File(selected == null ?
+                        System.getProperty("user.home") : selected.getPath()));
                 int result = fileChooser.showOpenDialog(ui);
                 if (result == JFileChooser.APPROVE_OPTION) {
                     selected = fileChooser.getSelectedFile();

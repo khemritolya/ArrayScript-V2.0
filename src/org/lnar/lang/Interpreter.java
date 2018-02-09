@@ -182,7 +182,7 @@ public class Interpreter {
                 labels = sLabels;
                 return successcode;
             } catch (Exception e) {
-                print("Could not import library!");
+                print("Could not import library!\n");
                 return failcode;
             }
         } else if (line.startsWith("ui")) {
